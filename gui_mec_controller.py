@@ -1018,16 +1018,15 @@ class LocalCache:
             print (val)
 
     def plot_cache_performance(self, ax):
-        keys = ['Hit', 'Miss', 'M-Hit']
-        total = self.miss + self.hit + self.mec_hit
+        keys = ['Hit', 'Miss']
+        total = self.miss + self.hit
 
         val = [self.percent(self.hit, total),
-               self.percent(self.miss, total),
-               self.percent(self.mec_hit, total)]
+               self.percent(self.miss, total)]
         cols = ['g', 'r', 'b']
         ypos = ([0, 1, 2])
 
-        values = [self.hit, self.miss, self.mec_hit]
+        values = [self.hit, self.miss]
         for i in values:
             j = values.index(i)
             ax.text(j - 0.1, values[j], '{}%'.format(val[j]), rotation=0,
@@ -1478,7 +1477,7 @@ def run(no_mec):
     collaborative_cache = CollaborativeCache(no_mec=no_mec)
     request_data = pd.read_csv(f'request_data.csv')
     # no_reqs = int(request_data.shape[0] * 0.3)  # testing data is 30 % => 67,259
-    no_reqs = 10000  # testing data is 30 % => 67,259
+    no_reqs = 20000  # testing data is 30 % => 67,259
     n = 5 * 8 * 10
     no_of_requests = (no_reqs // n) * n  # No of requests should be divisible by 5, 10, 15 MECs |  67,200
 

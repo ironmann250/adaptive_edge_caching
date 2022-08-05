@@ -1009,7 +1009,6 @@ class LocalCache:
             else:
                 explode.append(0)
         try:
-            val.reverse()
             ax.pie(val, autopct='%1.1f%%', shadow=True, explode=explode, colors=['g', 'r'], normalize=False)
             ax.set_title('Association Prediction')
             plt.subplot(ax)
@@ -1019,14 +1018,14 @@ class LocalCache:
 
     def plot_cache_performance(self, ax):
         keys = ['Hit', 'Miss']
-        total = self.miss + self.hit
+        total = self.miss + self.hit+self.mec_hit
 
-        val = [self.percent(self.hit, total),
+        val = [self.percent(self.hit+self.mec_hit, total),
                self.percent(self.miss, total)]
-        cols = ['g', 'r', 'b']
-        ypos = ([0, 1, 2])
+        cols = ['g', 'r']
+        ypos = ([0, 1])
 
-        values = [self.hit, self.miss]
+        values = [self.hit+self.mec_hit, self.miss]
         for i in values:
             j = values.index(i)
             ax.text(j - 0.1, values[j], '{}%'.format(val[j]), rotation=0,

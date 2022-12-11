@@ -9,3 +9,4 @@ cd caching
 /etc/init.d/ssh start
 ssh-keygen -t rsa
 ssh-copy-id osboxes@192.168.122.66
+                                      

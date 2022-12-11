@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import seaborn as sns
 import numpy as np
 from additional_algorithms.count_chain import CountChain #FBR fails if samples exceed 100
 from additional_algorithms.mq import MQ
@@ -7,6 +8,7 @@ import random as r
 import concurrent.futures
 from time import process_time_ns,process_time,perf_counter
 
+sns.set_style('whitegrid')
 fig = plt.figure()
 ax1 = fig.add_subplot(331)
 ax2 = fig.add_subplot(332)

@@ -1,0 +1,13 @@
+4.2.2 comparison: improve and add more and add reference
+- when you explain algorithm show pseudocode
+
+chapter 2
+check frank chapter 1
+
+chapter 3 (name it an academic name)
+explain algorithms used to compare
+and strategies used by others
+
+chapter 4 explain our algorithms
+
+1.1 state of the arts [On Mobile Edge Caching - section V)

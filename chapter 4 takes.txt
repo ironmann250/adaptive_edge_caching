@@ -1,0 +1,28 @@
+- sys model
+>figure of network
+- proposed scheme (paper)
+>pcr caching framework figure
+
+proposed approach
+- 37107 to equ 22
+
+experiment & results
+- setup,dataset & params
+>mec screenshot
+
+- (results & comparisons) perfomance and resource utilisation
+>cpu, memory and delay figures (5,10,15 in one with dif colours)
+- comparison to popular algorithms
+perfomance comparison
+>perfomance comparison figure
+efficiency comparison
+>cpu usage figure
+
+
+
+plots
+-----
+together 3 cpu
+mecs hit ratios sub 5,10,15
+
+
